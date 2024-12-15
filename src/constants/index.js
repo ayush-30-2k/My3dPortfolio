@@ -147,14 +147,6 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: snapgram,
-    theme: "btn-back-pink",
-    name: "ToonChat - Chat Application",
-    description:
-      "Built an React Web chat App.",
-    link: "https://toonchat.netlify.app",
-  },
-  {
     iconUrl: estate,
     theme: "btn-back-black",
     name: "Apple iPhone 3D - Three.js Web App",
@@ -169,5 +161,12 @@ export const projects = [
     description:
       "This stunning 3d Doraemon is created by using only the CSS 3d and html, no img, gif and .js is used",
     link: "https://doraemon3d.netlify.app",
-  },
+  },  {
+    iconUrl: snapgram,
+    theme: "btn-back-pink",
+    name: "ToonChat - Chat Application",
+    description:
+      "Built an React Web chat App.",
+    link: "https://toonchat.netlify.app",
+  }
 ];
