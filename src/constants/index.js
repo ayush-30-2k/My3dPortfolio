@@ -147,35 +147,11 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: pricewise,
-    theme: "btn-back-red",
-    name: "Musify",
-    description:
-      "Created a music application that can provide whole kind of music format",
-    link: "https://github.com/adrianhajdin/pricewise",
-  },
-  {
-    iconUrl: threads,
-    theme: "btn-back-green",
-    name: "Full Stack Threads Clone",
-    description:
-      'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: "https://github.com/adrianhajdin/threads",
-  },
-  {
-    iconUrl: car,
-    theme: "btn-back-blue",
-    name: "Car Finding App",
-    description:
-      "Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.",
-    link: "https://github.com/adrianhajdin/project_next13_car_showcase",
-  },
-  {
     iconUrl: snapgram,
     theme: "btn-back-pink",
     name: "ToonChat - Chat Application",
     description:
-      "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
+      "Built an React Web chat App.",
     link: "https://toonchat.netlify.app",
   },
   {
@@ -183,7 +159,7 @@ export const projects = [
     theme: "btn-back-black",
     name: "Apple iPhone 3D - Three.js Web App",
     description:
-      "Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.",
+      "Developed a web application for re-creating the Iphone page with an actual 3D Iphone model.",
     link: "https://appleiphone15pro.netlify.app/",
   },
   {
@@ -191,7 +167,7 @@ export const projects = [
     theme: "btn-back-red",
     name: "Doraemon 3D (Only CSS)",
     description:
-      "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",
+      "This stunning 3d Doraemon is created by using only the CSS 3d and html, no img, gif and .js is used",
     link: "https://doraemon3d.netlify.app",
   },
 ];
