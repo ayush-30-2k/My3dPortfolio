@@ -181,8 +181,8 @@ export function Island({
       <a.group name="Sketchfab_Scene">
         <a.group
           name="Sketchfab_model"
-          rotation={[-Math.PI / 2, 0.2, 0]}
-          scale={0.725}
+          rotation={[-Math.PI / 2, 0, 0]}
+          scale={0.625}
         >
           <a.group
             name="bde2a52c2bcc4654b1515c2b3e89a71bfbx"
@@ -190,6 +190,35 @@ export function Island({
           >
             <a.group name="Object_2">
               <a.group name="RootNode">
+                <a.group name="MOUETTE_DEF">
+                  <mesh
+                    name="0"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes["0"].geometry}
+                    material={materials.MOUETTE}
+                    morphTargetDictionary={nodes["0"].morphTargetDictionary}
+                    morphTargetInfluences={nodes["0"].morphTargetInfluences}
+                  />
+                  <mesh
+                    name="1"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes["1"].geometry}
+                    material={materials["MOUETTE.jaune"]}
+                    morphTargetDictionary={nodes["1"].morphTargetDictionary}
+                    morphTargetInfluences={nodes["1"].morphTargetInfluences}
+                  />
+                  <mesh
+                    name="2"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes["2"].geometry}
+                    material={materials["MOUETTE.noir"]}
+                    morphTargetDictionary={nodes["2"].morphTargetDictionary}
+                    morphTargetInfluences={nodes["2"].morphTargetInfluences}
+                  />
+                </a.group>
                 <a.group name="ROT">
                   <a.group name="ISLE_17">
                     <mesh
@@ -215,6 +244,13 @@ export function Island({
                     />
 
                     <mesh
+                      name="ISLE_17_palmier-tronc_0"
+                      castShadow
+                      receiveShadow
+                      geometry={nodes["ISLE_17_palmier-tronc_0"].geometry}
+                      material={materials["palmier-tronc"]}
+                    />
+                    <mesh
                       name="ISLE_17_palmier-feuilles_0"
                       castShadow
                       receiveShadow
@@ -228,7 +264,13 @@ export function Island({
                       geometry={nodes["ISLE_17_ile-o_0"].geometry}
                       material={materials["ile-o"]}
                     />
-
+                    <mesh
+                      name="ISLE_17_ile-ecume_0"
+                      castShadow
+                      receiveShadow
+                      geometry={nodes["ISLE_17_ile-ecume_0"].geometry}
+                      material={materials["ile-ecume"]}
+                    />
                     <mesh
                       name="ISLE_17_ile-nuage_0"
                       castShadow
@@ -242,6 +284,13 @@ export function Island({
                       receiveShadow
                       geometry={nodes.ISLE_17_LUNE_0.geometry}
                       material={materials.LUNE}
+                    />
+                    <mesh
+                      name="ISLE_17_ile-lave_0"
+                      castShadow
+                      receiveShadow
+                      geometry={nodes["ISLE_17_ile-lave_0"].geometry}
+                      material={materials["ile-lave"]}
                     />
                   </a.group>
                 </a.group>
