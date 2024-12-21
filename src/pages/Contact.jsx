@@ -18,38 +18,40 @@ const Contact = () => {
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
 
-    if (form.name.length || form.email.length || form.message.length) {
-      handleTyping();
-    }
+    // if (form.name.length || form.email.length || form.message.length) {
+    //   handleTyping();
+    // }
   };
 
-  useEffect(() => {
-    console.log(isTyping);
-    handleTyping();
+  // useEffect(() => {
+  //   console.log(isTyping);
+  //   handleTyping();
 
-    setTimeout(() => {
-      setisTyping(true);
-    }, 2000);
-  }, [form.length]);
+  //   setTimeout(() => {
+  //     setisTyping(true);
+  //   }, 950);
+  // }, [form.length]);
 
-  const [isTyping, setisTyping] = useState(false);
+  // const [isTyping, setisTyping] = useState(false);
 
-  const handleTyping = () => {
-    isTyping
-      ? setCurrentAnimation("Dragon_Boss_05_skill04")
-      : setTimeout(() => {
-          setCurrentAnimation("Dragon_Boss_05_idle");
-        }, 800);
-  };
+  // const handleTyping = () => {
+  //   isTyping && setCurrentAnimation("Dragon_Boss_05_skill04");
+  // };
+
+  const [isAnimateIdle, setIsAnimateIdle] = useState(true);
+
   const handleTypingOver = () => {
+    if (handleTypingStart()) {
+      setCurrentAnimation("Dragon_Boss_05_idle");
+    }
     setTimeout(() => {
       setCurrentAnimation("Dragon_Boss_05_idle");
-    }, 800);
+    }, 3000);
+    setIsAnimateIdle(false);
   };
-
   const handleTypingStart = () => {
-    setCurrentAnimation("Dragon_Boss_05_skill04");
-    setisTyping(true);
+    !isAnimateIdle && setCurrentAnimation("Dragon_Boss_05_skill04");
+    // setisTyping(true);
   };
 
   const handleSubmit = (e) => {
