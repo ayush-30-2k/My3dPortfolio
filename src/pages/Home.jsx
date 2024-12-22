@@ -47,8 +47,8 @@ const Home = () => {
       screenScale = [6.5, 6.5, 1.9];
       screenPosition = [4.5, 12.2, -50.014];
     } else if ((window.innerWidth < 680 && window, innerWidth >= 400)) {
-      screenScale = [6.5, 6.5, 1.9];
-      screenPosition = [-2.5, 9.2, -42.014];
+      screenScale = [7.6, 7.6, 1.8];
+      screenPosition = [-2.5, 9.2, -45.014];
     } else {
       screenScale = [6, 5.3, 1.1];
       screenPosition = [-3, 9.2, -35.014];
@@ -135,7 +135,7 @@ const Home = () => {
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight position={[1.3, 1.8, 2.9]} intensity={2} />
+          <directionalLight position={[1.4, 1.8, 2.9]} intensity={1.65} />
           <ambientLight intensity={-0.5} />
           <pointLight position={[7, 2, 3]} intensity={8} />
           <spotLight
