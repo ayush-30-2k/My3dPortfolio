@@ -10,7 +10,6 @@ export function Fox({ currentAnimation, isRotating, ...props }) {
 
   useEffect(() => {
     Object.values(actions).forEach((action) => action.stop());
-
     if (actions[currentAnimation]) {
       actions[currentAnimation].play();
     }
