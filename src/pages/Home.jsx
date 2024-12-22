@@ -30,11 +30,32 @@ const Home = () => {
 
     // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
+      screenScale = [1.7, 1.7, 1.7];
       screenPosition = [0, -1.5, 0];
     } else {
-      screenScale = [3, 3, 3];
+      screenScale = [3.5, 3.5, 3.5];
       screenPosition = [0, -4, -4];
+    }
+
+    return [screenScale, screenPosition];
+  };
+
+  const adjustDragonForScreenSize = () => {
+    let screenScale, screenPosition;
+
+    // If screen width is less than 768px, adjust the scale and position
+    if (window.innerWidth >= 950) {
+      screenScale = [9.8, 9.8, 4.7];
+      screenPosition = [4.5, 1, -34.01];
+    } else if (window.innerWidth < 950 && window.innerWidth >= 670) {
+      screenScale = [6.5, 6.5, 1.9];
+      screenPosition = [4.5, 12.2, -50.014];
+    } else if ((window.innerWidth < 680 && window, innerWidth >= 400)) {
+      screenScale = [6.5, 6.5, 1.9];
+      screenPosition = [-2.5, 9.2, -42.014];
+    } else {
+      screenScale = [6, 5.3, 1.1];
+      screenPosition = [-3, 9.2, -35.014];
     }
 
     return [screenScale, screenPosition];
@@ -46,10 +67,13 @@ const Home = () => {
     let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
-      screenScale = [0.4, 0.4, 0.4];
-      screenPosition = [0, changeposition, -45.4];
+      screenScale = [0.27, 0.27, 0.27];
+      screenPosition = [-6, changeposition, -45.4];
+    } else if (window.innerWidth < 600) {
+      screenScale = [0.22, 0.22, 0.22];
+      screenPosition = [-12.8, changeposition, -45.4];
     } else {
-      screenScale = [0.4, 0.3, 0.3];
+      screenScale = [0.35, 0.35, 0.35];
       screenPosition = [0, changeposition, -45.4];
     }
 
@@ -102,6 +126,7 @@ const Home = () => {
 
   const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
   const [islandScale, islandPosition] = adjustIslandForScreenSize();
+  const [dragonScale, dragonPosition] = adjustDragonForScreenSize();
 
   return (
     <section className="w-full h-screen relative">
@@ -135,8 +160,8 @@ const Home = () => {
           <Fox
             currentAnimation={currentAnimation}
             // isRotating={isRotating}
-            position={[4.5, 1, -34.01]}
-            scale={[6.8, 8.8, 6.8]}
+            position={dragonPosition}
+            scale={dragonScale}
             rotation={[12.629, -0.8, 0]}
           />
 
