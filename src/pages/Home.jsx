@@ -4,7 +4,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import sakura from "../assets/sakura.mp3";
 import { HomeInfo, Loader } from "../components";
 import { soundoff, soundon } from "../assets/icons";
-import { Bird, Plane } from "../models";
+import { Bird, Fox, Island, Plane } from "../models";
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
@@ -149,7 +149,21 @@ const Home = () => {
             groundColor="#000000"
             intensity={0.46}
           />
+          <Fox
+            currentAnimation={currentAnimation}
+            position={dragonPosition}
+            scale={dragonScale}
+            rotation={[12.629, -0.8, 0]}
+          />
           <Bird />
+          <Island
+            isRotating={isRotating}
+            setIsRotating={setIsRotating}
+            setCurrentStage={setCurrentStage}
+            position={islandPosition}
+            rotation={[0.2, 1.7077, 0.12]}
+            scale={islandScale}
+          />
           <Plane
             isRotating={isRotating}
             position={biplanePosition}
