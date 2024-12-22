@@ -8,6 +8,7 @@ const Navbar = () => {
       className="header"
       style={{
         transition: "1s ease-in-out",
+        zIndex: "2000",
       }}
     >
       <NavLink to="/">
