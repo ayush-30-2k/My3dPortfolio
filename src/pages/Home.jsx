@@ -27,8 +27,6 @@ const Home = () => {
 
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition;
-
-    // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth < 768) {
       screenScale = [1.7, 1.7, 1.7];
       screenPosition = [0, -1.5, 0];
@@ -42,8 +40,6 @@ const Home = () => {
 
   const adjustDragonForScreenSize = () => {
     let screenScale, screenPosition;
-
-    // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth >= 950) {
       screenScale = [9.8, 9.8, 4.7];
       screenPosition = [4.5, 1, -34.01];
@@ -99,7 +95,6 @@ const Home = () => {
     "Dragon_Boss_05_skill02",
     "Dragon_Boss_05_skill03",
     "Dragon_Boss_05_skill04",
-    // "Dragon_Boss_05_skill05",
     "Dragon_Boss_05_skill06",
   ];
 
@@ -133,7 +128,6 @@ const Home = () => {
       <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center opacity-70">
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
-
       <Canvas
         className={`w-full h-screen bg-blue-950 ${
           isRotating ? "cursor-grabbing" : "cursor-grab"
@@ -155,16 +149,12 @@ const Home = () => {
             groundColor="#000000"
             intensity={0.46}
           />
-          {/* dynamic z-positioning for small devices --- desktop : -- [4.5, 1, -24.01], tablet -- [], smartphone : [] */}
-          {/* Task :-- Optimize the position and scale of the dragon for all the device -- Responsive */}
           <Fox
             currentAnimation={currentAnimation}
-            // isRotating={isRotating}
             position={dragonPosition}
             scale={dragonScale}
             rotation={[12.629, -0.8, 0]}
           />
-
           <Bird />
           <Island
             isRotating={isRotating}
@@ -174,7 +164,6 @@ const Home = () => {
             rotation={[0.2, 1.7077, 0.12]}
             scale={islandScale}
           />
-
           <Plane
             isRotating={isRotating}
             position={biplanePosition}
@@ -183,7 +172,6 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
-
       <div className="absolute bottom-2 left-2">
         <img
           src={!isPlayingMusic ? soundoff : soundon}
